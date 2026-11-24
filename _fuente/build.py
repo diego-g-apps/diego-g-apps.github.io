@@ -105,7 +105,8 @@ def pagina(lang, tipo, slug, titulo, descripcion, cuerpo, sitio):
 <meta name="theme-color" content="#0f3d3e">
 {canonical}
 {alternos}
-<link rel="icon" href="{up}assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{up}assets/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="{up}assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="{up}assets/css/styles.css">
 </head>
 <body>
@@ -113,7 +114,7 @@ def pagina(lang, tipo, slug, titulo, descripcion, cuerpo, sitio):
 {aviso}<header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="{up}{ruta(lang, "index")}">
-      <span class="brand-mark" aria-hidden="true">DG</span>
+      <img class="brand-logo" src="{up}assets/img/logo.png" alt="" width="40" height="40">
       <span class="brand-text">Diego G <span>Apps</span></span>
     </a>
     <nav class="main-nav" aria-label="{t["nav_apps"]}">
