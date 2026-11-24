@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "ruleta-de-limpieza",
+    "nombre": "Ruleta de Limpieza",
+    "paquete": "com.ahlanenergy.ruletadelimpieza",
+    "version": "2.0.0.7",
+    "tipo": "admob",
+    "en_desarrollo": false,
+    "descripcion": {
+      "es": "Reparte las tareas de casa girando una ruleta.",
+      "it": "Distribuisci le faccende di casa girando una ruota."
+    },
+    "datos_locales": {
+      "es": [
+        "La lista de tareas que escribes para la ruleta.",
+        "Tus ajustes de sonido y música."
+      ],
+      "it": [
+        "L'elenco delle faccende che scrivi per la ruota.",
+        "Le tue impostazioni di suoni e musica."
+      ]
+    },
+    "anuncio": {
+      "es": "un banner en la parte superior de la pantalla",
+      "it": "un banner nella parte superiore dello schermo"
+    },
+    "boton_privacidad": {
+      "es": "el botón «Privacidad de anuncios» de la pantalla de configuración",
+      "it": "il pulsante «Privacidad de anuncios» nella schermata delle impostazioni"
+    }
+  },
+  {
+    "slug": "hockey-de-mesa-relax",
+    "nombre": "Hockey de Mesa Relax",
+    "paquete": "com.ahlanenergy.hockeydemesarelax",
+    "version": "1.0.0.9",
+    "tipo": "admob",
+    "en_desarrollo": false,
+    "descripcion": {
+      "es": "Partidas de hockey de mesa contra la máquina.",
+      "it": "Partite di air hockey contro il computer."
+    },
+    "datos_locales": {
+      "es": [
+        "Tus ajustes de música y efectos de sonido.",
+        "Tu progreso en el juego (niveles desbloqueados)."
+      ],
+      "it": [
+        "Le tue impostazioni di musica ed effetti sonori.",
+        "I tuoi progressi nel gioco (livelli sbloccati)."
+      ]
+    },
+    "anuncio": {
+      "es": "un banner en la parte inferior del menú principal",
+      "it": "un banner nella parte inferiore del menu principale"
+    },
+    "boton_privacidad": {
+      "es": "el botón «Privacidad» del menú principal",
+      "it": "il pulsante «Privacidad» del menu principale"
+    }
+  },
+  {
+    "slug": "alpaca-racing",
+    "nombre": "Alpaca Racing",
+    "paquete": "com.ahlanenergy.alpacaracing",
+    "version": "0.1.0",
+    "tipo": "sin_red",
+    "en_desarrollo": true,
+    "descripcion": {
+      "es": "Carreras de alpacas en los Andes: elige tu favorita y mira la carrera.",
+      "it": "Corse di alpaca sulle Ande: scegli la tua preferita e guarda la gara."
+    },
+    "datos_locales": {
+      "es": [
+        "Tus ajustes de sonido y música."
+      ],
+      "it": [
+        "Le tue impostazioni di suoni e musica."
+      ]
+    }
+  }
+]
