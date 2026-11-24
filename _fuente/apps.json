@@ -6,27 +6,30 @@
     "version": "2.0.0.7",
     "tipo": "admob",
     "en_desarrollo": false,
+    "icono": true,
     "descripcion": {
       "es": "Reparte las tareas de casa girando una ruleta.",
-      "it": "Distribuisci le faccende di casa girando una ruota."
+      "en": "Share out the household chores by spinning a wheel.",
+      "it": "Distribuisci le faccende di casa girando una ruota.",
+      "pt": "Divida as tarefas de casa girando uma roleta."
     },
     "datos_locales": {
-      "es": [
-        "La lista de tareas que escribes para la ruleta.",
-        "Tus ajustes de sonido y música."
-      ],
-      "it": [
-        "L'elenco delle faccende che scrivi per la ruota.",
-        "Le tue impostazioni di suoni e musica."
-      ]
+      "es": ["La lista de tareas que escribes para la ruleta.", "Tus ajustes de sonido y música."],
+      "en": ["The list of chores you type in for the wheel.", "Your sound and music settings."],
+      "it": ["L'elenco delle faccende che scrivi per la ruota.", "Le tue impostazioni di suoni e musica."],
+      "pt": ["A lista de tarefas que você escreve para a roleta.", "Suas configurações de som e música."]
     },
     "anuncio": {
       "es": "un banner en la parte superior de la pantalla",
-      "it": "un banner nella parte superiore dello schermo"
+      "en": "a banner at the top of the screen",
+      "it": "un banner nella parte superiore dello schermo",
+      "pt": "um banner na parte superior da tela"
     },
     "boton_privacidad": {
       "es": "el botón «Privacidad de anuncios» de la pantalla de configuración",
-      "it": "il pulsante «Privacidad de anuncios» nella schermata delle impostazioni"
+      "en": "the “Privacidad de anuncios” (ad privacy) button on the settings screen",
+      "it": "il pulsante «Privacidad de anuncios» nella schermata delle impostazioni",
+      "pt": "o botão “Privacidad de anuncios” (privacidade dos anúncios) na tela de configurações"
     }
   },
   {
@@ -36,27 +39,86 @@
     "version": "1.0.0.9",
     "tipo": "admob",
     "en_desarrollo": false,
+    "icono": true,
     "descripcion": {
       "es": "Partidas de hockey de mesa contra la máquina.",
-      "it": "Partite di air hockey contro il computer."
+      "en": "Air hockey matches against the computer.",
+      "it": "Partite di air hockey contro il computer.",
+      "pt": "Partidas de hóquei de mesa contra o computador."
     },
     "datos_locales": {
-      "es": [
-        "Tus ajustes de música y efectos de sonido.",
-        "Tu progreso en el juego (niveles desbloqueados)."
-      ],
-      "it": [
-        "Le tue impostazioni di musica ed effetti sonori.",
-        "I tuoi progressi nel gioco (livelli sbloccati)."
-      ]
+      "es": ["Tus ajustes de música y efectos de sonido.", "Tu progreso en el juego (niveles desbloqueados)."],
+      "en": ["Your music and sound effect settings.", "Your progress in the game (unlocked levels)."],
+      "it": ["Le tue impostazioni di musica ed effetti sonori.", "I tuoi progressi nel gioco (livelli sbloccati)."],
+      "pt": ["Suas configurações de música e efeitos sonoros.", "Seu progresso no jogo (níveis desbloqueados)."]
     },
     "anuncio": {
       "es": "un banner en la parte inferior del menú principal",
-      "it": "un banner nella parte inferiore del menu principale"
+      "en": "a banner at the bottom of the main menu",
+      "it": "un banner nella parte inferiore del menu principale",
+      "pt": "um banner na parte inferior do menu principal"
     },
     "boton_privacidad": {
       "es": "el botón «Privacidad» del menú principal",
-      "it": "il pulsante «Privacidad» del menu principale"
+      "en": "the “Privacidad” (privacy) button in the main menu",
+      "it": "il pulsante «Privacidad» del menu principale",
+      "pt": "o botão “Privacidad” (privacidade) no menu principal"
+    }
+  },
+  {
+    "slug": "crucigrama-de-jergas",
+    "nombre": "Crucigrama de Jergas",
+    "paquete": "com.ahlanenergy.crucigramadejergas",
+    "version": "2.0.0",
+    "tipo": "admob",
+    "en_desarrollo": false,
+    "icono": true,
+    "anuncios_g": true,
+    "enlaces_externos": true,
+    "descripcion": {
+      "es": "Crucigramas con las jergas y expresiones de Latinoamérica.",
+      "en": "Crosswords built from Latin American slang and expressions.",
+      "it": "Cruciverba con lo slang e le espressioni dell'America Latina.",
+      "pt": "Palavras cruzadas com gírias e expressões da América Latina."
+    },
+    "datos_locales": {
+      "es": ["Tu progreso: niveles ganados, partidas en curso, tiempos récord y expresiones de tu colección.", "Tus ajustes del juego."],
+      "en": ["Your progress: levels won, games in progress, best times and the expressions in your collection.", "Your game settings."],
+      "it": ["I tuoi progressi: livelli vinti, partite in corso, tempi record ed espressioni della tua collezione.", "Le tue impostazioni di gioco."],
+      "pt": ["Seu progresso: níveis vencidos, partidas em andamento, melhores tempos e expressões da sua coleção.", "Suas configurações do jogo."]
+    },
+    "anuncio": {
+      "es": "un banner en la parte inferior del menú principal y, a veces, un anuncio a pantalla completa (intersticial) cuando eliges cómo continuar después de perder una partida por tiempo",
+      "en": "a banner at the bottom of the main menu and, sometimes, a full-screen (interstitial) ad when you choose how to continue after losing a game on time",
+      "it": "un banner nella parte inferiore del menu principale e, a volte, un annuncio a schermo intero (interstitial) quando scegli come continuare dopo aver perso una partita per tempo scaduto",
+      "pt": "um banner na parte inferior do menu principal e, às vezes, um anúncio em tela cheia (intersticial) quando você escolhe como continuar depois de perder uma partida por tempo"
+    },
+    "boton_privacidad": {
+      "es": "el botón «Privacidad de anuncios» de la pantalla de Ajustes",
+      "en": "the “Privacidad de anuncios” (ad privacy) button on the Ajustes (settings) screen",
+      "it": "il pulsante «Privacidad de anuncios» nella schermata Ajustes (impostazioni)",
+      "pt": "o botão “Privacidad de anuncios” (privacidade dos anúncios) na tela Ajustes (configurações)"
+    }
+  },
+  {
+    "slug": "inca-chess",
+    "nombre": "Inca Chess",
+    "paquete": "com.ahlanenergy.incachess",
+    "version": "0.2.0",
+    "tipo": "sin_red",
+    "en_desarrollo": true,
+    "icono": false,
+    "descripcion": {
+      "es": "Ajedrez de incas contra españoles, contra la IA o entre dos jugadores.",
+      "en": "Chess with Incas against Spaniards, versus the AI or two players.",
+      "it": "Scacchi tra inca e spagnoli, contro l'IA o tra due giocatori.",
+      "pt": "Xadrez de incas contra espanhóis, contra a IA ou entre dois jogadores."
+    },
+    "datos_locales": {
+      "es": ["La partida que guardas para continuarla más tarde.", "Tus preferencias, como el tablero elegido.", "Un perfil local con un nombre de jugador generado al azar y tu historial de partidas. No sale de tu teléfono."],
+      "en": ["The game you save to continue later.", "Your preferences, such as the chosen board.", "A local profile with a randomly generated player name and your game history. It never leaves your phone."],
+      "it": ["La partita che salvi per continuarla più tardi.", "Le tue preferenze, come la scacchiera scelta.", "Un profilo locale con un nome di giocatore generato a caso e la cronologia delle partite. Non esce dal tuo telefono."],
+      "pt": ["A partida que você salva para continuar depois.", "Suas preferências, como o tabuleiro escolhido.", "Um perfil local com um nome de jogador gerado aleatoriamente e seu histórico de partidas. Ele não sai do seu telefone."]
     }
   },
   {
@@ -66,17 +128,18 @@
     "version": "0.1.0",
     "tipo": "sin_red",
     "en_desarrollo": true,
+    "icono": true,
     "descripcion": {
       "es": "Carreras de alpacas en los Andes: elige tu favorita y mira la carrera.",
-      "it": "Corse di alpaca sulle Ande: scegli la tua preferita e guarda la gara."
+      "en": "Alpaca races in the Andes: pick your favourite and watch the race.",
+      "it": "Corse di alpaca sulle Ande: scegli la tua preferita e guarda la gara.",
+      "pt": "Corridas de alpacas nos Andes: escolha a sua favorita e assista à corrida."
     },
     "datos_locales": {
-      "es": [
-        "Tus ajustes de sonido y música."
-      ],
-      "it": [
-        "Le tue impostazioni di suoni e musica."
-      ]
+      "es": ["Tus ajustes de sonido y música."],
+      "en": ["Your sound and music settings."],
+      "it": ["Le tue impostazioni di suoni e musica."],
+      "pt": ["Suas configurações de som e música."]
     }
   }
 ]

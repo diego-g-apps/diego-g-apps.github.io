@@ -1,61 +1,73 @@
-# Políticas de privacidad – apps Android de Diego G
+# Políticas de privacidad – Diego G Apps
 
-Web estática (HTML + CSS, sin servidor ni base de datos) publicada gratis con **GitHub Pages**.
-Cada app tiene su propia página en español y en italiano.
+Web estática (HTML + CSS, sin servidor, sin cookies y sin scripts) publicada gratis con **GitHub Pages**
+en **https://diego-g-apps.github.io** (repositorio `diego-g-apps/diego-g-apps.github.io`).
+
+Cada app tiene su política en **español, inglés, italiano y portugués**. La raíz incluye también
+`app-ads.txt` para AdMob.
+
+## Direcciones
+
+| Idioma | Portada | Contacto | Política de cada app |
+|---|---|---|---|
+| Español | `/` | `/contacto.html` | `/privacy/<app>.html` ← la que va en Google Play |
+| Inglés | `/en/` | `/en/contact.html` | `/en/privacy/<app>.html` |
+| Italiano | `/it/` | `/it/contatti.html` | `/it/privacy/<app>.html` |
+| Portugués | `/pt/` | `/pt/contato.html` | `/pt/privacy/<app>.html` |
+
+No cambies las rutas en español ni en italiano: ya están puestas en Google Play.
 
 ## Estructura
 
 ```
-index.html                         Portada (español)
-contacto.html                      Contacto (español)
-privacy/<app>.html                 Política de cada app (español)  ← URL para Google Play
-it/index.html                      Portada (italiano)
-it/contatti.html                   Contatti (italiano)
-it/privacy/<app>.html              Informativa di ogni app (italiano)
-assets/css/styles.css              Estilos
-assets/img/<app>.png               Iconos de las apps (128×128)
-_fuente/sitio.json                 Nombre del desarrollador, correo y fecha de actualización
-_fuente/apps.json                  Datos de cada app (lo que guarda, anuncios, versión revisada…)
-_fuente/build.py                   Genera todas las páginas HTML a partir de los dos JSON
+app-ads.txt                 Vendedores autorizados de AdMob (una línea, vale para todas las apps)
+index.html, contacto.html   Español (raíz)
+en/, it/, pt/               Los otros idiomas
+privacy/<app>.html          Políticas en español
+assets/css/styles.css       Estilos
+assets/img/<app>.png        Iconos de las apps (128×128)
+assets/img/favicon.svg      Icono de la pestaña del navegador
+_fuente/sitio.json          Nombre del desarrollador, correo, dirección de la web y fecha de actualización
+_fuente/apps.json           Datos de cada app en los 4 idiomas
+_fuente/textos.py           Todos los textos de la web en los 4 idiomas
+_fuente/build.py            Genera todas las páginas a partir de los archivos anteriores
 ```
 
 Las carpetas que empiezan por `_` **no se publican** (GitHub Pages las ignora).
 
-## Cómo regenerar las páginas
+## Regenerar las páginas
 
 ```
 python3 _fuente/build.py
 ```
 
-No necesita instalar nada. Si faltan el nombre o el correo en `sitio.json`, las páginas salen con un
-aviso rojo de BORRADOR y el script termina con error. No publiques así.
+No necesita instalar nada. El script comprueba que cada app tenga sus textos en los 4 idiomas y su icono.
 
 ## Añadir una app nueva
 
-1. Revisar el AAB/APK publicado: permisos del manifiesto, SDK incluidos (AdMob, Firebase…), acceso a Internet,
-   qué se guarda en `user://`.
-2. Añadir un bloque en `_fuente/apps.json` copiando uno existente:
-   - `"tipo": "admob"` si la app muestra anuncios de AdMob con el formulario de consentimiento de Google (UMP).
-   - `"tipo": "sin_red"` si la app **no** tiene permiso de Internet ni SDK de terceros.
-   - Si la app usa algo distinto (Firebase, compras, cuenta de usuario, ubicación…), hay que ampliar
-     `build.py` con una sección nueva. No reutilices un tipo que no describa la realidad.
-3. Poner el icono en `assets/img/<slug>.png` (128×128).
-4. Ejecutar `python3 _fuente/build.py`, revisar las páginas y publicar.
+1. Revisar el proyecto y el AAB: permisos del manifiesto, SDK incluidos (AdMob, Firebase…), acceso a
+   Internet, qué se guarda en `user://` y si abre enlaces externos.
+2. Añadir un bloque en `_fuente/apps.json` copiando uno existente, con los textos en `es`, `en`, `it` y `pt`:
+   - `"tipo": "admob"` si muestra anuncios de AdMob con el formulario de consentimiento de Google (UMP).
+     Rellenar `anuncio` y `boton_privacidad`.
+   - `"tipo": "sin_red"` si **no** tiene permiso de Internet ni SDK de terceros.
+   - `"anuncios_g": true` si la app limita los anuncios a contenido para todos los públicos.
+   - `"enlaces_externos": true` si la app abre enlaces a webs externas.
+   - `"en_desarrollo": true` si aún no está publicada.
+   - `"icono": false` si todavía no tiene icono (se muestran sus iniciales).
+   - Si la app usa algo distinto (Firebase, compras, cuentas, ubicación…), hay que ampliar `build.py` y
+     `textos.py` con una sección nueva. No reutilices un tipo que no describa la realidad.
+3. Poner el icono en `assets/img/<slug>.png` (128×128) y quitar `"icono": false`.
+4. Cambiar `fecha_iso` en `sitio.json`, ejecutar `python3 _fuente/build.py`, revisar y publicar.
 
 ## Cuándo actualizar una política
 
-Hay que revisar la política y cambiar `fecha_iso` en `sitio.json` cuando una versión nueva:
+Cuando una versión nueva añade o quita anuncios, SDK de terceros, permisos, cuentas, compras, multijugador
+online o envío de datos a un servidor, o cambia el público objetivo. Después hay que revisar también el
+formulario **Seguridad de los datos** de esa app en Play Console.
 
-- añade o quita anuncios, o cambia de red publicitaria;
-- añade SDK de terceros (Firebase, Analytics, Crashlytics, Unity, Facebook…);
-- añade permisos (Internet, ubicación, cámara, micrófono, contactos, archivos, notificaciones…);
-- añade cuentas de usuario, compras dentro de la app, multijugador online o envío de datos a un servidor;
-- cambia el público objetivo (por ejemplo, si incluye menores de 13 años).
+**Inca Chess:** la versión 0.2.0 tiene el modo online desactivado y no pide Internet. Si se activa el modo
+online, hay que reescribir su política antes de publicar esa versión.
 
-Después hay que revisar también el formulario **Seguridad de los datos** de esa app en Play Console,
-para que coincida con la política.
-
-## Alpaca Racing
-
-La versión 0.1.0 no tiene permiso de Internet ni anuncios. Antes de publicar la versión con AdMob:
+**Alpaca Racing:** la versión 0.1.0 no tiene Internet ni anuncios. Antes de publicar la versión con AdMob,
 cambiar `"tipo"` a `"admob"`, rellenar `anuncio` y `boton_privacidad`, actualizar `version` y la fecha, y regenerar.
