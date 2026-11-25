@@ -241,10 +241,13 @@ def politica(app, lang, sitio):
 
     sec("responsable", t["s_resp_h"], f'<p>{t["s_resp"].format(n=n, dev=dev, mail=mail)}</p>')
 
+    backup = app.get("copia_android", False)   # copia de seguridad de Android y datos conservables al desinstalar
     locales = lista([e(x) for x in app["datos_locales"][lang]])
+    despues = t["s_local_after_backup" if backup else "s_local_after"].format(path=t["android_path"].format(n=n))
+    extra = f'<p>{t["s_backup_p"]}</p><p>{t["s_uninstall_p"]}</p>' if backup else ""
     sec("datos", t["s_local_h"],
         f'<p>{t["s_local_intro"]}</p>{locales}'
-        f'<p>{t["s_local_after"].format(path=t["android_path"].format(n=n))}</p>')
+        f'<p>{despues}</p>{extra}')
 
     if admob:
         c = f'<p>{t["s_ads_p1"].format(anuncio=e(app["anuncio"][lang]))}</p>'
@@ -279,7 +282,7 @@ def politica(app, lang, sitio):
 
     sec("compartir", t["s_share_h"], f'<p>{t["s_share_admob"] if admob else t["s_share_offline"]}</p>')
 
-    cons = [t["keep_local"], t["keep_mail"]]
+    cons = [t["keep_local_backup" if backup else "keep_local"], t["keep_mail"]]
     if admob:
         cons.insert(1, t["keep_google"].format(privacy=GOOGLE["privacy"]))
     sec("conservacion", t["s_keep_h"], lista(cons) + f'<p>{t["keep_noacc"]}</p>')
@@ -291,7 +294,10 @@ def politica(app, lang, sitio):
     sec("cambios", t["s_changes_h"], f'<p>{t["changes"]}</p>')
     sec("contacto", t["s_contact_h"], f'<p>{dev} · {mail}</p>')
 
-    resumen = t["sum_admob"] if admob else t["sum_offline"]
+    resumen = list(t["sum_admob"] if admob else t["sum_offline"])
+    if backup:
+        # sustituye la frase «se queda solo en tu teléfono» por la que explica la copia de Android
+        resumen[1 if admob else 3] = t["sum_backup"]
     nota = f'<p class="note">{t["dev_note"]}</p>' if app.get("en_desarrollo") else ""
 
     toc = "\n".join(f'        <li><a href="#{sid}">{titulo}</a></li>' for sid, titulo, _ in secciones)
@@ -323,7 +329,7 @@ def politica(app, lang, sitio):
       </div>
     </div>
     <dl class="meta">
-      <div><dt>{t["meta_updated"]}</dt><dd>{fecha(sitio["fecha_iso"], lang)}</dd></div>
+      <div><dt>{t["meta_updated"]}</dt><dd>{fecha(app.get("fecha_iso", sitio["fecha_iso"]), lang)}</dd></div>
       <div><dt>{t["meta_version"]}</dt><dd>{e(app["version"])}</dd></div>
       <div><dt>{t["meta_package"]}</dt><dd><code>{e(app["paquete"])}</code></dd></div>
     </dl>

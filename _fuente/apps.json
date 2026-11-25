@@ -141,5 +141,41 @@
       "it": ["Le tue impostazioni di suoni e musica."],
       "pt": ["Suas configurações de som e música."]
     }
+  },
+  {
+    "slug": "mr-hero-greek-myths",
+    "nombre": "Mr. Hero: Greek Myths",
+    "paquete": "com.ahlanenergy.mrherogreekmyths",
+    "version": "0.4.0",
+    "tipo": "admob",
+    "en_desarrollo": true,
+    "icono": true,
+    "anuncios_g": true,
+    "copia_android": true,
+    "descripcion": {
+      "es": "Puzles de arco y flechas con Ulises en la mitología griega.",
+      "en": "Bow-and-arrow puzzles with Odysseus in Greek mythology.",
+      "it": "Puzzle con arco e frecce insieme a Ulisse nella mitologia greca.",
+      "pt": "Quebra-cabeças de arco e flecha com Ulisses na mitologia grega."
+    },
+    "datos_locales": {
+      "es": ["Tu progreso: las estrellas conseguidas en cada nivel (que también desbloquean los niveles siguientes).", "Las estrellas gastadas en la tienda, los aspectos de Ulises que has comprado y el que llevas puesto.", "Tus ajustes de sonido y música."],
+      "en": ["Your progress: the stars earned in each level (which also unlock the next levels).", "The stars spent in the shop, the Odysseus skins you have bought and the one you are wearing.", "Your sound and music settings."],
+      "it": ["I tuoi progressi: le stelle ottenute in ogni livello (che sbloccano anche i livelli successivi).", "Le stelle spese nel negozio, gli aspetti di Ulisse che hai comprato e quello che indossi.", "Le tue impostazioni di suoni e musica."],
+      "pt": ["Seu progresso: as estrelas conquistadas em cada nível (que também desbloqueiam os níveis seguintes).", "As estrelas gastas na loja, as roupas de Ulisses que você comprou e a que está usando.", "Suas configurações de som e música."]
+    },
+    "anuncio": {
+      "es": "un banner en la parte inferior del menú principal y, cada dos derrotas, un anuncio a pantalla completa (intersticial) al pulsar «Reintentar»",
+      "en": "a banner at the bottom of the main menu and, after every second defeat, a full-screen (interstitial) ad when you tap “Reintentar” (retry)",
+      "it": "un banner nella parte inferiore del menu principale e, ogni due sconfitte, un annuncio a schermo intero (interstitial) quando tocchi «Reintentar» (riprova)",
+      "pt": "um banner na parte inferior do menu principal e, a cada duas derrotas, um anúncio em tela cheia (intersticial) quando você toca em “Reintentar” (tentar de novo)"
+    },
+    "boton_privacidad": {
+      "es": "el botón «Privacidad de anuncios» del menú principal",
+      "en": "the “Privacidad de anuncios” (ad privacy) button in the main menu",
+      "it": "il pulsante «Privacidad de anuncios» del menu principale",
+      "pt": "o botão “Privacidad de anuncios” (privacidade dos anúncios) no menu principal"
+    },
+    "fecha_iso": "2026-11-25"
   }
 ]
