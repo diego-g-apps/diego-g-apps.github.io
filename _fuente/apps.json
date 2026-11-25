@@ -106,7 +106,7 @@
     "paquete": "com.ahlanenergy.incachess",
     "version": "0.2.0",
     "tipo": "sin_red",
-    "en_desarrollo": true,
+    "en_desarrollo": false,
     "icono": false,
     "descripcion": {
       "es": "Ajedrez de incas contra españoles, contra la IA o entre dos jugadores.",
@@ -127,7 +127,7 @@
     "paquete": "com.ahlanenergy.alpacaracing",
     "version": "0.1.0",
     "tipo": "sin_red",
-    "en_desarrollo": true,
+    "en_desarrollo": false,
     "icono": true,
     "descripcion": {
       "es": "Carreras de alpacas en los Andes: elige tu favorita y mira la carrera.",
@@ -145,10 +145,10 @@
   {
     "slug": "mr-hero-greek-myths",
     "nombre": "Mr. Hero: Greek Myths",
-    "paquete": "com.ahlanenergy.mrherogreekmyths",
-    "version": "0.4.0",
+    "paquete": "com.ahlanenergy.mrherogreek",
+    "version": "2.0.0",
     "tipo": "admob",
-    "en_desarrollo": true,
+    "en_desarrollo": false,
     "icono": true,
     "anuncios_g": true,
     "copia_android": true,
