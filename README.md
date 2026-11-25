@@ -55,6 +55,9 @@ No necesita instalar nada. El script comprueba que cada app tenga sus textos en 
    - `"enlaces_externos": true` si la app abre enlaces a webs externas.
    - `"en_desarrollo": true` si aún no está publicada.
    - `"icono": false` si todavía no tiene icono (se muestran sus iniciales).
+   - `"copia_android": true` si el juego permite la copia de seguridad de Android (`allowBackup`) y
+     ofrece conservar los datos al desinstalar. La política lo explica en «Datos que la app guarda».
+   - `"fecha_iso"` en una app usa esa fecha de actualización solo para su política (si no, la de `sitio.json`).
    - Si la app usa algo distinto (Firebase, compras, cuentas, ubicación…), hay que ampliar `build.py` y
      `textos.py` con una sección nueva. No reutilices un tipo que no describa la realidad.
 3. Poner el icono en `assets/img/<slug>.png` (128×128) y quitar `"icono": false`.
@@ -71,3 +74,8 @@ online, hay que reescribir su política antes de publicar esa versión.
 
 **Alpaca Racing:** la versión 0.1.0 no tiene Internet ni anuncios. Antes de publicar la versión con AdMob,
 cambiar `"tipo"` a `"admob"`, rellenar `anuncio` y `boton_privacidad`, actualizar `version` y la fecha, y regenerar.
+
+**Mr. Hero: Greek Myths:** la versión 0.4.0 lleva AdMob (banner en el menú principal e intersticial cada 2
+derrotas al pulsar «Reintentar»), contenido de anuncios G, copia de seguridad de Android activada y opción de
+conservar los datos al desinstalar. Al exportar su primer AAB, comprobar que los permisos del manifiesto coinciden
+con la tabla de la política (son los mismos del SDK de Google que en Crucigrama de Jergas).
