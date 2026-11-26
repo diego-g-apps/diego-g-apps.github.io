@@ -125,9 +125,10 @@
     "slug": "alpaca-racing",
     "nombre": "Alpaca Racing",
     "paquete": "com.ahlanenergy.alpacaracing",
-    "version": "0.1.0",
-    "tipo": "sin_red",
+    "version": "0.2.0",
+    "tipo": "admob",
     "en_desarrollo": false,
+    "anuncios_g": true,
     "icono": true,
     "descripcion": {
       "es": "Carreras de alpacas en los Andes: elige tu favorita y mira la carrera.",
@@ -140,7 +141,20 @@
       "en": ["Your sound and music settings."],
       "it": ["Le tue impostazioni di suoni e musica."],
       "pt": ["Suas configurações de som e música."]
-    }
+    },
+    "anuncio": {
+      "es": "un banner en la parte inferior del menú principal (nunca durante las carreras)",
+      "en": "a banner at the bottom of the main menu (never during races)",
+      "it": "un banner nella parte inferiore del menu principale (mai durante le gare)",
+      "pt": "um banner na parte inferior do menu principal (nunca durante as corridas)"
+    },
+    "boton_privacidad": {
+      "es": "el botón «Privacidad de anuncios» del menú principal",
+      "en": "the “Privacidad de anuncios” (ad privacy) button in the main menu",
+      "it": "il pulsante «Privacidad de anuncios» del menu principale",
+      "pt": "o botão “Privacidad de anuncios” (privacidade dos anúncios) no menu principal"
+    },
+    "fecha_iso": "2026-11-26"
   },
   {
     "slug": "mr-hero-greek-myths",

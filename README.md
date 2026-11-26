@@ -72,8 +72,7 @@ formulario **Seguridad de los datos** de esa app en Play Console.
 **Inca Chess:** la versión 0.2.0 tiene el modo online desactivado y no pide Internet. Si se activa el modo
 online, hay que reescribir su política antes de publicar esa versión.
 
-**Alpaca Racing:** la versión 0.1.0 no tiene Internet ni anuncios. Antes de publicar la versión con AdMob,
-cambiar `"tipo"` a `"admob"`, rellenar `anuncio` y `boton_privacidad`, actualizar `version` y la fecha, y regenerar.
+**Alpaca Racing:** desde la versión 0.2.0 (código 2) lleva AdMob: banner abajo solo en el menú principal, contenido de anuncios G, formulario UMP y botón «Privacidad de anuncios». Sin copia de seguridad de Android.
 
 **Mr. Hero: Greek Myths:** la versión 0.4.0 lleva AdMob (banner en el menú principal e intersticial cada 2
 derrotas al pulsar «Reintentar»), contenido de anuncios G, copia de seguridad de Android activada y opción de
